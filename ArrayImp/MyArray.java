@@ -68,8 +68,18 @@ public class MyArray {
         System.out.println();
     }
     
-  
-
+  // override toString method to dispaly data instead of reference value 
+  @Override
+public String toString() {
+    if (size == 0) return "[]";
+    StringBuilder sb = new StringBuilder("[");
+    for (int i = 0; i < size; i++) {
+        sb.append(data[i]);
+        if (i < size - 1) sb.append(", ");
+    }
+    sb.append("]");
+    return sb.toString();
+}
     public static void main(String[] args) {
         MyArray arr = new MyArray(5);
         arr.add(10);
