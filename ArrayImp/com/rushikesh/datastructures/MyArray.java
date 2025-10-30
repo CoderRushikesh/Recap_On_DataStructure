@@ -1,5 +1,6 @@
 
 package com.rushikesh.datastructures;
+import com.rushikesh.utils.MyArrays;
 public class MyArray {
     private int[] data;
     private int size;
@@ -93,4 +94,16 @@ public String toString() {
         
         
     }
+public int[] toIntArray() {
+    int[] result = new int[size];
+    System.arraycopy(data, 0, result, 0, size);
+    return result;
+}
+
+public void setFromArray(int[] arr) {
+    data = new int[arr.length];
+    System.arraycopy(arr, 0, data, 0, arr.length);
+    size = arr.length;
+}
+   
 }
