@@ -21,7 +21,13 @@ public final class MyArrays {
     }
 
     //  Searching
-   
+    public static int binarySearch(MyArray arr, int key) {
+        return java.util.Arrays.binarySearch(arr.toIntArray(), key);
+    }
+
+    public static int binarySearch(MyArray arr, int fromIndex, int toIndex, int key) {
+        return java.util.Arrays.binarySearch(arr.toIntArray(), fromIndex, toIndex, key);
+    }
 
     
     }
