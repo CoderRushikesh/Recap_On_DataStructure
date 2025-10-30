@@ -55,6 +55,20 @@ public final class MyArrays {
         arr.setFromArray(temp);
     }
 
+    //  Copying
+    public static MyArray copyOf(MyArray original, int newLength) {
+        int[] temp = java.util.Arrays.copyOf(original.toIntArray(), newLength);
+        MyArray copy = new MyArray(newLength);
+        copy.setFromArray(temp);
+        return copy;
+    }
+
+    public static MyArray copyOfRange(MyArray original, int from, int to) {
+        int[] temp = java.util.Arrays.copyOfRange(original.toIntArray(), from, to);
+        MyArray copy = new MyArray(temp.length);
+        copy.setFromArray(temp);
+        return copy;
+    }
     
     }
 
