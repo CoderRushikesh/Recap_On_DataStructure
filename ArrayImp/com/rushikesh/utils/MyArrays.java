@@ -23,24 +23,24 @@ public final class MyArrays {
     //  Searching
     public static int binarySearch(MyArray arr, int key) {
         return java.util.Arrays.binarySearch(arr.toIntArray(), key);
-    }
+    } // internal implemtation is remaining 
 
     public static int binarySearch(MyArray arr, int fromIndex, int toIndex, int key) {
         return java.util.Arrays.binarySearch(arr.toIntArray(), fromIndex, toIndex, key);
-    }
+    } // imp remaining 
 
     // Comparison 
     public static boolean equals(MyArray a, MyArray b) {
         return java.util.Arrays.equals(a.toIntArray(), b.toIntArray());
-    }
+    } // imp remaining 
 
     public static int mismatch(MyArray a, MyArray b) {
         return java.util.Arrays.mismatch(a.toIntArray(), b.toIntArray());
-    }
+    } // imp remaining 
 
     public static int compare(MyArray a, MyArray b) {
         return java.util.Arrays.compare(a.toIntArray(), b.toIntArray());
-    }
+    } // imp remaining 
 
     //  Filling
     public static void fill(MyArray arr, int value) {
@@ -70,5 +70,41 @@ public final class MyArrays {
         return copy;
     }
     
+   //  toString method is created for conversion 
+    public static String toString(MyArray arr) {
+        return java.util.Arrays.toString(arr.toIntArray());
+    }
+        // imp remaining 
+   
+
+
+    //  Index search
+    public static int indexOf(MyArray arr, int value) {
+        int[] temp = arr.toIntArray();
+        for (int i = 0; i < temp.length; i++) {
+            if (temp[i] == value) return i;
+        }
+        return -1;
+    }
+  //  Max and Min
+    public static int max(MyArray arr) {
+        int[] temp = arr.toIntArray();
+        int max = temp[0];
+        for (int val : temp) {
+            if (val > max) max = val;
+        }
+        return max;
+    }
+
+    public static int min(MyArray arr) {
+        int[] temp = arr.toIntArray();
+        int min = temp[0];
+        for (int val : temp) {
+            if (val < min) min = val;
+        }
+        return min;
+    }
+
+
     }
 
