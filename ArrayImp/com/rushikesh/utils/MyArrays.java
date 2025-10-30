@@ -29,6 +29,19 @@ public final class MyArrays {
         return java.util.Arrays.binarySearch(arr.toIntArray(), fromIndex, toIndex, key);
     }
 
+    // Comparison 
+    public static boolean equals(MyArray a, MyArray b) {
+        return java.util.Arrays.equals(a.toIntArray(), b.toIntArray());
+    }
+
+    public static int mismatch(MyArray a, MyArray b) {
+        return java.util.Arrays.mismatch(a.toIntArray(), b.toIntArray());
+    }
+
+    public static int compare(MyArray a, MyArray b) {
+        return java.util.Arrays.compare(a.toIntArray(), b.toIntArray());
+    }
+
     
     }
 
