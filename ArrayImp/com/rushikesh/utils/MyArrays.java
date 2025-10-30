@@ -42,6 +42,19 @@ public final class MyArrays {
         return java.util.Arrays.compare(a.toIntArray(), b.toIntArray());
     }
 
+    //  Filling
+    public static void fill(MyArray arr, int value) {
+        int[] temp = arr.toIntArray();
+        java.util.Arrays.fill(temp, value);
+        arr.setFromArray(temp);
+    }
+
+    public static void fill(MyArray arr, int fromIndex, int toIndex, int value) {
+        int[] temp = arr.toIntArray();
+        java.util.Arrays.fill(temp, fromIndex, toIndex, value);
+        arr.setFromArray(temp);
+    }
+
     
     }
 
