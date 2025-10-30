@@ -1,3 +1,5 @@
+
+package com.rushikesh.datastructures;
 public class MyArray {
     private int[] data;
     private int size;
@@ -68,8 +70,8 @@ public class MyArray {
         System.out.println();
     }
     
-  // override toString method to dispaly data instead of reference value 
-  @Override
+    // Override toString to dispaly data instead of reference value 
+    @Override
 public String toString() {
     if (size == 0) return "[]";
     StringBuilder sb = new StringBuilder("[");
@@ -80,6 +82,7 @@ public String toString() {
     sb.append("]");
     return sb.toString();
 }
+
     public static void main(String[] args) {
         MyArray arr = new MyArray(5);
         arr.add(10);
