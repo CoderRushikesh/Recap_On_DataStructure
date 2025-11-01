@@ -21,13 +21,45 @@ public final class MyArrays {
     }
 
     //  Searching
+    // i have implemented the binary search but it will work when the arrays is sorted so before using this method use the sort method 
     public static int binarySearch(MyArray arr, int key) {
-        return java.util.Arrays.binarySearch(arr.toIntArray(), key);
-    } // internal implemtation is remaining 
+        System.out.println("please sort the Array first using sort method  / if you have sorted then ignore it ");
+    int[] data = arr.toIntArray();
+    int low = 0;
+    int high = data.length - 1;
 
-    public static int binarySearch(MyArray arr, int fromIndex, int toIndex, int key) {
-        return java.util.Arrays.binarySearch(arr.toIntArray(), fromIndex, toIndex, key);
-    } // imp remaining 
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (data[mid] == key) return mid;
+        else if (data[mid] < key) low = mid + 1;
+        else high = mid - 1;
+    }
+
+    return -1; // Not found
+}
+
+
+  public static int binarySearch(MyArray arr, int fromIndex, int toIndex, int key) {
+    int[] data = arr.toIntArray();
+
+    if (fromIndex < 0 || toIndex > data.length || fromIndex > toIndex)
+        throw new IllegalArgumentException("Invalid range");
+
+    int low = fromIndex;
+    int high = toIndex - 1;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+
+        if (data[mid] == key) return mid;
+        else if (data[mid] < key) low = mid + 1;
+        else high = mid - 1;
+    }
+
+    return -1;
+}
+
 
     // Comparison 
     public static boolean equals(MyArray a, MyArray b) {
