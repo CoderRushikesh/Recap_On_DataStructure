@@ -76,9 +76,21 @@ public final class MyArrays {
 }
 
 
-    public static int mismatch(MyArray a, MyArray b) {
-        return java.util.Arrays.mismatch(a.toIntArray(), b.toIntArray());
-    } // imp remaining 
+   public static int mismatch(MyArray a, MyArray b) {
+    int[] arr1 = a.toIntArray();
+    int[] arr2 = b.toIntArray();
+
+    int minLength = Math.min(arr1.length, arr2.length);
+
+    for (int i = 0; i < minLength; i++) {
+        if (arr1[i] != arr2[i]) return i;
+    }
+
+    if (arr1.length != arr2.length) return minLength;
+
+    return -1; // No mismatch
+}
+
 
     public static int compare(MyArray a, MyArray b) {
         return java.util.Arrays.compare(a.toIntArray(), b.toIntArray());
