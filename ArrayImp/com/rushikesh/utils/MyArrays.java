@@ -62,9 +62,19 @@ public final class MyArrays {
 
 
     // Comparison 
-    public static boolean equals(MyArray a, MyArray b) {
-        return java.util.Arrays.equals(a.toIntArray(), b.toIntArray());
-    } // imp remaining 
+   public static boolean equals(MyArray a, MyArray b) {
+    int[] arr1 = a.toIntArray();
+    int[] arr2 = b.toIntArray();
+
+    if (arr1.length != arr2.length) return false;
+
+    for (int i = 0; i < arr1.length; i++) {
+        if (arr1[i] != arr2[i]) return false;
+    }
+
+    return true;
+}
+
 
     public static int mismatch(MyArray a, MyArray b) {
         return java.util.Arrays.mismatch(a.toIntArray(), b.toIntArray());
