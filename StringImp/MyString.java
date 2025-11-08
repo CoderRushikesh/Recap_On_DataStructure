@@ -40,9 +40,23 @@ public class MyString {
  }
 
     // Converts to lowercase
-    public MyString toLowerCase() {
-        String str = this.toString().toLowerCase();
-        return new MyString(str);
+    public MyString toLowerCase(){
+      String original = this.toString();
+      StringBuilder result = new StringBuilder();
+
+      for(int i = 0; i<original.length(); i++){
+      char ch = original.charAt(i);
+
+      if(ch >= 'A' && ch <= 'Z'){
+        result.append((char) (ch+32));
+        // main logic using acci values - diff is A - 65 / a - 97 = 32
+
+      }else{
+        result.append(ch);
+      }
+
+      }
+return new MyString(result.toString());
     }
 
     // Converts to uppercase
