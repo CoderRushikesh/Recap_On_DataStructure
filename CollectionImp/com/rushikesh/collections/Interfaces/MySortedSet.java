@@ -1,5 +1,5 @@
 package CollectionImp.com.rushikesh.collections.Interfaces;
 
-public class MySortedSet {
+public interface MySortedSet<E> extends MyCollection<E> {
     
 }

@@ -1,5 +1,5 @@
 package CollectionImp.com.rushikesh.collections.Interfaces;
 
-public class MyCollection {
+public interface MyCollection<E> extends Iterator<E>{
     
 }

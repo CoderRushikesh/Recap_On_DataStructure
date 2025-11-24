@@ -1,5 +1,5 @@
 package CollectionImp.com.rushikesh.collections.Interfaces;
 
-public class MySet {
+public interface MySet<E> extends MyCollection<E> {
     
 }

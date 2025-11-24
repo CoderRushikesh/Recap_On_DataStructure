@@ -1,5 +1,5 @@
 package CollectionImp.com.rushikesh.collections.Interfaces;
 
-public class MyDeque {
+public interface MyDeque<E> extends MyCollection<E> {
     
 }

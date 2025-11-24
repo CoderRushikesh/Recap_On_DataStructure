@@ -1,5 +1,5 @@
 package CollectionImp.com.rushikesh.collections.Interfaces;
 
-public class MyList {
+public interface MyList<E> extends MyCollection<E> {
     
 }

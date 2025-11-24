@@ -1,5 +1,5 @@
 package CollectionImp.com.rushikesh.collections.Interfaces;
 
-public class MyQueue {
+public interface MyQueue<E> extends MyCollection<E> {
     
 }
